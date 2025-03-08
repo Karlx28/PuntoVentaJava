@@ -280,8 +280,23 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this," Nombre es obligatorio ",
                     "Systema", JOptionPane.WARNING_MESSAGE);
             txtNombre.requestFocus();
+            return;
         }
         
+        String respuesta;
+        
+        if( this.accion.equals("editar")){
+            
+        }else{
+            respuesta = this.CONTROL.Insertar(txtNombre.getText(), txtDescripcion.getText());
+            if (respuesta.equals("OK")) {
+                this.mensajeOk("Registrado Correctamente");
+                this.limpiar();
+                this.listar("");
+            }else {
+                this.mensajeError(respuesta);
+            }
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
   
 
