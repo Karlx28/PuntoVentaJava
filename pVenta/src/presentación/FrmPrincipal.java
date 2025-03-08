@@ -2,6 +2,7 @@
 package presentación;
 import java.awt.Color;
 import java.awt.Graphics;
+import javax.swing.JDesktopPane;
 
 
 public class FrmPrincipal extends javax.swing.JFrame {
